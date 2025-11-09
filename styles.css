@@ -1,0 +1,471 @@
+/* Paleta de Colores Inspirada en la Imagen:
+   - Rosa Fuerte/Fondo: #FF69B4 (Pink de Muma 🩷)
+   - Amarillo Suave/Nube: #FFECB3 (Limón suave)
+   - Púrpura/Azul Ojos: #9370DB (Púrpura Vibrante)
+   - Tono más oscuro (bordes, texto): #5D3FD3 (Morado Oscuro)
+   - Texto principal: #333333
+   - Enlaces: #FF69B4
+*/
+
+/* ------------------------------------- */
+/* ESTILOS GLOBALES Y RESETS             */
+/* ------------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fuente amigable */
+    line-height: 1.6;
+    color: #333333;
+    background-color: #F8F8F8; /* Un fondo muy claro para no competir con el rosa */
+}
+
+/* ------------------------------------- */
+/* TIPOGRAFÍA                            */
+/* ------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Comic Sans MS', 'Segoe UI', cursive, sans-serif; /* Un toque juguetón */
+    color: #5D3FD3; /* Morado Oscuro para títulos */
+    margin-bottom: 0.8em;
+    line-height: 1.2;
+}
+
+h1 { font-size: 2.8em; color: #FF69B4; /* Rosa para el título principal */ }
+h2 { font-size: 2.2em; }
+h3 { font-size: 1.8em; }
+
+p {
+    margin-bottom: 1em;
+}
+
+a {
+    color: #FF69B4; /* Rosa para enlaces */
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+    color: #E05A9C; /* Rosa un poco más oscuro al pasar el ratón */
+}
+
+/* ------------------------------------- */
+/* LAYOUT BASE                           */
+/* ------------------------------------- */
+header, footer {
+    background-color: #FFECB3; /* Amarillo suave para header y footer */
+    color: #5D3FD3;
+    padding: 1.5em 5%;
+    text-align: center;
+}
+
+main {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+section {
+    padding: 40px 0;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #FFECB3; /* Separador suave */
+}
+
+section:last-of-type {
+    border-bottom: none;
+}
+
+/* ------------------------------------- */
+/* HEADER Y NAVEGACIÓN                   */
+/* ------------------------------------- */
+.logo h1 {
+    margin: 0;
+    font-size: 3em;
+    color: #FF69B4; /* Rosa vibrante para el logo */
+    display: inline-block;
+}
+
+.logo .tagline {
+    font-style: italic;
+    color: #5D3FD3;
+    font-size: 1.1em;
+    margin-top: 5px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Para responsive */
+    margin-top: 15px;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #5D3FD3; /* Texto de navegación morado */
+    font-weight: bold;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+nav ul li a:hover,
+nav ul li a.active {
+    background-color: #FF69B4; /* Fondo rosa al pasar el ratón */
+    color: #FFFFFF;
+}
+
+.cta-nav {
+    background-color: #FF69B4;
+    color: #FFFFFF !important; /* !important para asegurar que el rosa se vea */
+    padding: 8px 20px !important;
+    border-radius: 25px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.cta-nav:hover {
+    background-color: #E05A9C;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------------------- */
+/* BOTONES Y LLAMADAS A LA ACCIÓN        */
+/* ------------------------------------- */
+.btn-primary, .btn-secondary, .btn-link, .btn-social {
+    display: inline-block;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.btn-primary {
+    background-color: #FF69B4; /* Rosa principal */
+    color: #FFFFFF;
+    border: 2px solid #FF69B4;
+}
+
+.btn-primary:hover {
+    background-color: #E05A9C;
+    border-color: #E05A9C;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn-secondary {
+    background-color: #FFFFFF;
+    color: #5D3FD3; /* Morado texto */
+    border: 2px solid #9370DB; /* Borde púrpura */
+}
+
+.btn-secondary:hover {
+    background-color: #F0F0F0;
+    color: #333333;
+    border-color: #5D3FD3;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.btn-link {
+    color: #9370DB; /* Púrpura para enlaces sutiles */
+    text-decoration: underline;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin-top: 20px;
+    display: block; /* Para que ocupe su propia línea si es necesario */
+}
+
+.btn-link:hover {
+    color: #5D3FD3;
+    text-decoration: none;
+}
+
+.btn-social {
+    background-color: #9370DB; /* Púrpura para botón de Instagram */
+    color: #FFFFFF;
+    border: 2px solid #9370DB;
+    padding: 10px 20px;
+}
+
+.btn-social:hover {
+    background-color: #7B5EC7;
+    border-color: #7B5EC7;
+}
+
+/* ------------------------------------- */
+/* SECCIONES ESPECÍFICAS                 */
+/* ------------------------------------- */
+.hero {
+    background-color: #FFECB3; /* Fondo amarillo suave para el hero */
+    color: #5D3FD3;
+    padding: 80px 5%;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 40px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.hero h2 {
+    font-size: 3.5em;
+    color: #FF69B4; /* Título principal rosa */
+    margin-bottom: 0.5em;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 1.3em;
+    max-width: 800px;
+    margin: 0 auto 30px auto;
+}
+
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.producto {
+    background-color: #FFFFFF;
+    border: 1px solid #FFECB3; /* Borde amarillo suave */
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.producto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.producto h3 {
+    color: #FF69B4; /* Título de producto rosa */
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.producto p.precio {
+    font-weight: bold;
+    color: #5D3FD3;
+    font-size: 1.2em;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+/* Quiénes Somos */
+.nuestra-historia article {
+    background-color: #FFECB3; /* Bloques de historia con fondo amarillo */
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nuestra-historia article h3 {
+    color: #FF69B4;
+}
+
+.testimonio {
+    background-color: #9370DB; /* Púrpura para testimonios */
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 15px;
+    margin: 30px auto;
+    max-width: 700px;
+    text-align: center;
+    font-style: italic;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.testimonio footer {
+    margin-top: 15px;
+    font-weight: bold;
+    color: #FFECB3; /* Amarillo para el nombre */
+}
+
+/* Contacto y Formularios */
+.contacto-form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #FFECB3; /* Fondo amarillo suave para el formulario */
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contacto-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #5D3FD3;
+    font-weight: bold;
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form select,
+.contacto-form textarea {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #9370DB; /* Borde púrpura */
+    border-radius: 8px;
+    font-size: 1em;
+    color: #333333;
+}
+
+.contacto-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contacto-form button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.informacion-contacto {
+    text-align: center;
+    margin-top: 40px;
+    background-color: #F8F8F8;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px dashed #FF69B4; /* Borde punteado rosa */
+}
+
+.informacion-contacto h3 {
+    color: #FF69B4;
+}
+
+/* ------------------------------------- */
+/* FOOTER                                */
+/* ------------------------------------- */
+footer {
+    padding: 30px 5%;
+    margin-top: 40px;
+    background-color: #FFECB3;
+    border-top: 5px solid #FF69B4; /* Barra rosa en el footer */
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.footer-links nav ul {
+    display: block; /* Desactivar flex para columnas */
+    text-align: left;
+}
+
+.footer-links nav ul li {
+    margin: 5px 0;
+}
+
+.footer-links nav ul li a {
+    color: #5D3FD3;
+    font-weight: normal;
+}
+
+.contacto-footer {
+    text-align: right;
+}
+
+.contacto-footer p {
+    margin: 5px 0;
+    color: #5D3FD3;
+}
+
+.copyright {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #5D3FD3;
+}
+
+/* ------------------------------------- */
+/* ESTILOS RESPONSIVE BÁSICOS            */
+/* ------------------------------------- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 1.8em; }
+    .hero h2 { font-size: 2.5em; }
+    .hero p { font-size: 1.1em; }
+
+    nav ul {
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    .footer-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-links nav ul, .contacto-footer {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 15px;
+        margin: 10px auto;
+    }
+    .hero {
+        padding: 60px 20px;
+    }
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+    .contacto-form {
+        padding: 20px;
+    }
+}
+
+/* ------------------------------------- */
+/* IMÁGENES                              */
+/* ------------------------------------- */
+figure {
+    text-align: center;
+    margin: 30px 0;
+}
+
+figure img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px; /* Bordes suaves para imágenes */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: 3px solid #FF69B4; /* Borde rosa suave */
+}
+
+figcaption {
+    font-style: italic;
+    color: #9370DB;
+    margin-top: 10px;
+    font-size: 0.9em;
+}
