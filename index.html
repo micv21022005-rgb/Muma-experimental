@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muma 🌷 | Arte, Crochet y Trabajos Personalizados</title>
-    </head>
+    <meta name="description" content="Muma: Piezas únicas a crochet hechas a mano e ilustraciones personalizadas. Emprendimiento creativo desde la Isla de Margarita.">
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
     
     <header>
@@ -23,21 +27,43 @@
     </header>
 
     <main>
-        <section id="hero" class="hero">
-            <h2>Arte y Crochet: Creando Trabajos Personalizados con Amor.</h2>
-            <p>Especialistas en piezas únicas a crochet e ilustraciones para momentos especiales. **Isla de Margarita**.</p>
-            <a href="productos.html" role="button" class="btn-primary">Ver Portafolio de Crochet</a>
+        
+        <section id="hero" class="hero" aria-labelledby="heading-hero">
+            <h2 id="heading-hero">Arte y Crochet: Trabajos Personalizados con Amor y Magia Caribeña</h2>
+            <p>Especialistas en piezas únicas a crochet e ilustraciones exclusivas. Cada encargo es una pieza de arte hecha a mano y con la inspiración de la **Isla de Margarita**.</p>
+            <a href="productos.html" role="button" class="btn-primary">Ver Trabajos a Crochet</a>
         </section>
         
-        <section id="ilustraciones-preview">
-            <h3>Ilustraciones Exclusivas para Ti</h3>
-            <p>¿Buscas un regalo único? Creamos arte digital que captura la esencia de tus seres queridos.</p>
-            <a href="contacto.html#ilustraciones" class="btn-link">Solicitar Ilustración Personalizada</a>
+        <section id="ilustraciones-preview" aria-labelledby="heading-ilustraciones">
+            <h3 id="heading-ilustraciones">Ilustraciones para Momentos Especiales</h3>
+            <p>Inmortaliza recuerdos con nuestras ilustraciones digitales personalizadas. Perfectas para regalos y tarjetas de eventos.</p>
+            <a href="contacto.html#ilustraciones" class="btn-link">Solicitar Presupuesto</a>
         </section>
-        
-        </main>
+
+        <aside class="proceso">
+            <h3>Nuestro Compromiso Artesanal</h3>
+            <p>En Muma, cada hilo y cada trazo cuenta una historia. Tu pedido no es solo un producto, es una obra de arte única y personalizada.</p>
+        </aside>
+
+    </main>
     
     <footer>
-        </footer>
+        <div class="footer-links">
+            <nav aria-label="Enlaces legales y de ayuda">
+                <ul>
+                    <li><a href="/politica-encargos">Política de Encargos</a></li>
+                    <li><a href="/envios">Envíos y Entregas</a></li>
+                    <li><a href="/faq">Preguntas Frecuentes</a></li>
+                </ul>
+            </nav>
+
+            <address class="contacto-footer">
+                <p>Email: <a href="mailto:info@muma.mgta">info@muma.mgta</a></p>
+                <p>Sede Creativa: Isla de Margarita, Vzla.</p>
+            </address>
+        </div>
+        <p class="copyright">&copy; <time datetime="2024">2024</time> Muma. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 </html>
