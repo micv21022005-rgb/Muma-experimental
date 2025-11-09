@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muma 🌷 | Contacto y Encargos Personalizados</title>
+    <meta name="description" content="Contáctanos para solicitar tu pieza a crochet personalizada o tu ilustración especial. ¡Hablemos de tu proyecto!">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <header>
+        </header>
+
+    <main>
+        
+        <section id="contacto-form" aria-labelledby="heading-contacto">
+            <h2 id="heading-contacto">Contáctanos para tu Encargo Personalizado</h2>
+            <p>Utiliza el siguiente formulario para cotizar tu amigurumi, diseño a crochet o ilustración especial.</p>
+            
+            <form action="/submit-form" method="POST" class="contacto-form">
+                
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="tipo-encargo">Interesado en:</label>
+                <select id="tipo-encargo" name="tipo_encargo" required>
+                    <option value="">-- Selecciona una opción --</option>
+                    <option value="crochet-personalizado">Crochet Personalizado (Amigurumi, Deco)</option>
+                    <option value="ilustracion">Ilustración para Evento/Retrato</option>
+                    <option value="consulta-general">Consulta General</option>
+                </select>
+
+                <label for="mensaje">Describe tu idea:</label>
+                <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+
+                <button type="submit" class="btn-primary">Enviar Solicitud</button>
+            </form>
+        </section>
+
+        <aside class="informacion-contacto">
+            <h3>Alternativas Rápidas</h3>
+            <p>Si prefieres, puedes escribirnos directamente a nuestro correo o vía Instagram:</p>
+            <address>
+                <p>Email: <a href="mailto:info@muma.mgta">info@muma.mgta</a></p>
+                <p>Instagram Directo: <a href="https://www.instagram.com/muma.mgta/?hl=es" target="_blank" rel="noopener noreferrer">@muma.mgta</a></p>
+            </address>
+        </aside>
+
+    </main>
+
+    <footer>
+        </footer>
+    
+</body>
+</html>
